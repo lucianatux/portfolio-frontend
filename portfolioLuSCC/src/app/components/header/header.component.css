@@ -1,0 +1,48 @@
+#logoAP {
+    width: 150px;
+    padding: 10px;
+  }
+  
+  .elementos img {
+    width: 40px;
+    margin: 10px;
+  }
+  
+  .elementos{
+    padding: 10px;
+  }
+  
+  #barra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+  }
+  
+  #botonLogin {
+      margin: 20px;
+  }
+
+  @media (max-width: 767.98px) { /* Dispositivos móviles */
+    body{
+      font-size: 12px;
+    }
+
+    #logoAP {
+      width: 100px;
+      padding: 5px;
+    }
+    
+    .elementos img {
+      width: 30px;
+      margin: 5px;
+    }
+    
+    .elementos {
+      padding: 5px;
+    }
+    
+    #barra .navbar-nav {
+      font-size: 14px;
+    }
+  }
