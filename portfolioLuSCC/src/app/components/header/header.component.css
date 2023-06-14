@@ -45,4 +45,8 @@
     #barra .navbar-nav {
       font-size: 14px;
     }
+
+    .dropdown{
+      margin-left: 20px;
+    }
   }
