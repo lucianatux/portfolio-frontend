@@ -1,1 +1,388 @@
-<p>skills works!</p>
+<!--
+<div class="container" id="habilid">
+    <h2 class="subtitulo">Hard and Soft Skills</h2>
+    <div>
+      <div class="col-lg-11">
+        
+          <button
+            type="button"
+            class="btn btn-dark"
+            routerLink="/nuevahab"
+            *ngIf="isLogged"
+          >
+            Agregar Skill
+          </button>
+        
+          
+          <div class=" sm-4 md-3 lg-3" *ngFor="let Habilidades of habil">
+            <circle-progress
+                [percent]="Habilidades.porcentaje"
+                [radius]="60"
+                [imageSrc]="Habilidades.imagen"
+                [showImage]="true"
+                [imageHeight]="60"
+                [imageWidth]="60"
+                [showUnits]="false"
+                [showSubtitle]="true"
+                [outerStrokeWidth]="12"
+                [innerStrokeWidth]="8"
+                [outerStrokeColor]="Habilidades.skill"
+                [innerStrokeColor]="Habilidades.skill"
+                [animation]="true"
+                [animationDuration]="800"
+                [lazy]="true"     
+            ></circle-progress>
+         
+            <div class="col-sm-4 col-md-2 col-lg-4 align-items-start flex-column" *ngIf="isLogged">
+              <button
+                    class="btn btn-light"
+                    routerLink="/editskill/{{ Habilidades.id }}"
+                  >
+                    <i class="bi bi-pencil-fill"></i></button>  
+              
+                    <button class="btn btn-danger" (click)="delete(Habilidades.id)">
+                      <i class="bi bi-trash-fill"></i></button>
+            </div>        
+        </div>
+  
+        </div>
+      </div>
+    </div>
+  
+  
+  
+  
+  comentarios
+  
+  
+  <div class="container" id="habilid">
+    <h2 class="subtitulo">Habilidades</h2>
+    <div class="row">
+      <div class="col-lg-11">
+        <div class="col-lg-2">
+          <button
+            type="button"
+            class="btn btn-dark"
+            routerLink="/nuevahab"
+            *ngIf="isLogged"
+          >
+            Agregar Skill
+          </button>
+        </div>
+  
+        <div class="col lg 1"></div>
+        <div class="col-lg-11">
+          <table class="table">
+            <tbody>
+              <tr *ngFor="let Habilidades of habil">
+                <td>
+                  <h4>{{ Habilidades.skill }}</h4>
+                </td>
+                <td>{{ Habilidades.porcentaje }}</td>
+                <td>{{ Habilidades.imagen }}</td>
+                <td *ngIf="isLogged">
+                  <button
+                    class="btn btn-light"
+                    routerLink="/edithab/{{ Habilidades.id }}"
+                  >
+                    <i class="bi bi-pencil-fill"></i> EDITAR
+                  </button>
+                </td>
+                <td *ngIf="isLogged">
+                  <button class="btn btn-danger" (click)="delete(Habilidades.id)">
+                    <i class="bi bi-trash-fill"></i> BORRAR
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="container" id="habilid">
+    <h2 class="subtitulo">Habilidades</h2>
+  
+    <div class="row">
+      <div>
+        <h5>FrontEnd</h5>
+      </div>
+      <div class="text-center col-sm4 col-md-3 col-lg-3">
+        <circle-progress
+          [percent]="70"
+          [radius]="65"
+          [showSubtitle]="false"
+          [showUnits]="false"
+          [showImage]="true"
+          [imageSrc]="'../assets/bxl-html5.svg'"
+          [imageHeight]="80"
+          [imageWidth]="80"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#bf2b7a'"
+          [innerStrokeColor]="'pink'"
+          [animation]="true"
+          [animationDuration]="400"
+        ></circle-progress>
+      </div>
+      <div class="text-center col-sm4 col-md-3 col-lg-3">
+        <circle-progress
+  
+          [percent]="70"
+          [radius]="65"
+          [showSubtitle]="false"
+          [showUnits]="false"
+          [showImage]="true"
+          [imageSrc]="'../assets/bxs-file-css.svg'"
+          [imageHeight]="80"
+          [imageWidth]="80"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#bf2b7a'"
+          [innerStrokeColor]="'pink'"
+          [animation]="true"
+          [animationDuration]="400"
+        ></circle-progress>
+      </div>
+      <div class="text-center col-sm4 col-md-3 col-lg-3">
+        <circle-progress
+      
+          [percent]="70"
+          [radius]="65"
+          [showSubtitle]="false"
+          [showUnits]="false"
+          [showImage]="true"
+          [imageSrc]="'../assets/bxs-file-js.svg'"
+          [imageHeight]="80"
+          [imageWidth]="80"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#bf2b7a'"
+          [innerStrokeColor]="'pink'"
+          [animation]="true"
+          [animationDuration]="400"
+        ></circle-progress>
+      </div>
+      <div class="text-center col-sm4 col-md-3 col-lg-3">
+        <circle-progress
+   
+          [percent]="70"
+          [radius]="65"
+          [showSubtitle]="false"
+          [showUnits]="false"
+          [showImage]="true"
+          [imageSrc]="'../assets/bxl-html5.svg'"
+          [imageHeight]="80"
+          [imageWidth]="80"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#bf2b7a'"
+          [innerStrokeColor]="'pink'"
+          [animation]="true"
+          [animationDuration]="400"
+        ></circle-progress>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div>
+        <h5>BackEnd</h5>
+      </div>
+      <div class="text-center col-sm4 col-md-3 col-lg-3">
+        <circle-progress
+          [percent]="70"
+          [radius]="65"
+          [showSubtitle]="false"
+          [showUnits]="false"
+          [showImage]="true"
+          [imageSrc]="'../assets/bxl-html5.svg'"
+          [imageHeight]="80"
+          [imageWidth]="80"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#338199'"
+          [innerStrokeColor]="'aqua'"
+          [animation]="true"
+          [animationDuration]="400"
+        ></circle-progress>
+      </div>
+      <div class="text-center col-sm4 col-md-3 col-lg-3">
+        <circle-progress
+          [percent]="70"
+          [radius]="65"
+          [showSubtitle]="false"
+          [showUnits]="false"
+          [showImage]="true"
+          [imageSrc]="'../assets/bxs-file-css.svg'"
+          [imageHeight]="80"
+          [imageWidth]="80"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#338199'"
+          [innerStrokeColor]="'aqua'"
+          [animation]="true"
+          [animationDuration]="400"
+        ></circle-progress>
+      </div>
+      <div class="text-center col-sm4 col-md-3 col-lg-3">
+        <circle-progress
+          [percent]="70"
+          [radius]="65"
+          [showSubtitle]="false"
+          [showUnits]="false"
+          [showImage]="true"
+          [imageSrc]="'../assets/bxs-file-js.svg'"
+          [imageHeight]="80"
+          [imageWidth]="80"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#338199'"
+          [innerStrokeColor]="'aqua'"
+          [animation]="true"
+          [animationDuration]="400"
+        ></circle-progress>
+      </div>
+      <div class="text-center col-sm4 col-md-3 col-lg-3">
+        <circle-progress
+          [percent]="70"
+          [radius]="65"
+          [showSubtitle]="false"
+          [showUnits]="false"
+          [showImage]="true"
+          [imageSrc]="'../assets/bxl-html5.svg'"
+          [imageHeight]="80"
+          [imageWidth]="80"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#338199'"
+          [innerStrokeColor]="'aqua'"
+          [animation]="true"
+          [animationDuration]="400"
+        ></circle-progress>
+      </div>
+    </div>
+    <div class="row">
+      <div>
+        <h5>Soft Skills</h5>
+      </div>
+      <div class="text-center col-sm4 col-md-3 col-lg-3">
+        <circle-progress
+          [percent]="70"
+          [radius]="65"
+          [showSubtitle]="false"
+          [showUnits]="false"
+          [showImage]="true"
+          [imageSrc]="'../assets/bxl-html5.svg'"
+          [imageHeight]="80"
+          [imageWidth]="80"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#3fbf3f'"
+          [innerStrokeColor]="'green'"
+          [animation]="true"
+          [animationDuration]="400"
+        ></circle-progress>
+      </div>
+      <div class="text-center col-sm4 col-md-3 col-lg-3">
+        <circle-progress
+          [percent]="70"
+          [radius]="65"
+          [showSubtitle]="false"
+          [showUnits]="false"
+          [showImage]="true"
+          [imageSrc]="'../assets/bxs-file-css.svg'"
+          [imageHeight]="80"
+          [imageWidth]="80"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#3fbf3f'"
+          [innerStrokeColor]="'green'"
+          [animation]="true"
+          [animationDuration]="400"
+        ></circle-progress>
+      </div>
+      <div class="text-center col-sm4 col-md-3 col-lg-3">
+        <circle-progress
+          [percent]="70"
+          [radius]="65"
+          [showSubtitle]="false"
+          [showUnits]="false"
+          [showImage]="true"
+          [imageSrc]="'../assets/bxs-file-js.svg'"
+          [imageHeight]="80"
+          [imageWidth]="80"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#3fbf3f'"
+          [innerStrokeColor]="'green'"
+          [animation]="true"
+          [animationDuration]="400"
+        ></circle-progress>
+      </div>
+      <div class="text-center col-sm4 col-md-3 col-lg-3">
+        <circle-progress
+          [percent]="70"
+          [radius]="65"
+          [showSubtitle]="false"
+          [showUnits]="false"
+          [showImage]="true"
+          [imageSrc]="'../assets/bxl-html5.svg'"
+          [imageHeight]="80"
+          [imageWidth]="80"
+          [outerStrokeWidth]="16"
+          [innerStrokeWidth]="8"
+          [outerStrokeColor]="'#3fbf3f'"
+          [innerStrokeColor]="'green'"
+          [animation]="true"
+          [animationDuration]="400"
+        ></circle-progress>
+      </div>
+    </div>
+  </div>
+  
+-->
+
+<div class="container" id="habilid">
+    <h2 class="subtitulo">Hard and Soft Skills</h2>
+    <div>
+      <div class="col-lg-11">
+        
+          <button
+            type="button"
+            class="btn btn-dark"
+            routerLink="/nuevahab"
+            
+          >
+            Agregar Skill
+          </button>
+        
+          
+          <div class=" sm-4 md-3 lg-3" >
+            
+         
+            <div class="col-sm-4 col-md-2 col-lg-4 align-items-start flex-column" >
+              <button
+                    class="btn btn-light"
+                    
+                  >
+                    <i class="bi bi-pencil-fill"></i></button>  
+              
+                    <button class="btn btn-danger" >
+                      <i class="bi bi-trash-fill"></i></button>
+            </div>        
+        </div>
+  
+        </div>
+      </div>
+    </div>
+  
+  
+  
